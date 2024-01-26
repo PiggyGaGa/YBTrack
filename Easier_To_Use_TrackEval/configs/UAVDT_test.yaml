@@ -1,0 +1,74 @@
+# for MOTChallenge-Like dir structure 
+# ${data_root}:
+#    |
+#    |___${train_folder_name}(Optional)
+#          |
+#          |____${seq_name}
+#                     |_______${image_folder}
+#                                    |____${frame_name}
+#                     |_______${gt_folder_name}
+#                                    |____${gt_txt_name}
+#    |___${test_folder_name}(Optional)
+#          |
+#          |____${seq_name}
+#                     |_______${image_folder}
+#                                    |____${frame_name}
+#                     |_______${gt_folder_name}   
+#                                    |____${gt_txt_name}
+
+
+# track result MUST OBEY this strcture:
+# result:
+#    |
+#    |_____${train or test}(Optional)
+#                  |
+#                  |_____${tracker_name}(Optional)
+#                                |_______ ${seq_name}.txt
+
+
+gt_structure_config: 
+  data_root: '/data/wujiapeng/datasets/UAVDT/'
+  has_split: True
+  train_or_test: test
+  train_folder_name: UAV-benchmark-M
+  test_folder_name: UAV-benchmark-M
+  gt_folder_name: gt
+  gt_txt_name: 'gt.txt'  # gt.txt, {seq_name}.txt, etc.
+  gt_loc_format: '{data_root}/{split_name}/{seq_name}/{gt_folder_name}/{gt_txt_name}' 
+
+tracker_structure_config:
+  trackers_folder: './result/uavmot_09_05_14_55'
+  has_split: False
+  split_name: ''
+  has_tracker_name: False
+  trackers_to_eval:   # None for all
+
+
+# other options
+OUTPUT_FOLDER: './track_eval_output'   # Where to save eval results (if None  same as TRACKERS_FOLDER)
+
+SEQ_INFO:  # seq_name: seq_length
+  'M0101': 407
+  'M0202': 291
+  'M0203': 1007
+  'M0402': 410
+  # 'M0601': 372
+  'M0604': 1079
+  'M1002': 660
+  'M1003': 1346
+  'M1008': 569
+  'M1202': 472
+
+# CLASS configs
+CLASSES_TO_EVAL: 
+  - 'car'
+
+CLASS_NAME_TO_CLASS_ID:
+  'ignored': 0
+  'car': 1
+
+VALID_CLASS:
+  'car': 1
+
+DISTRACTOR_CLASSES_NAMES:
+  - 'ignored'

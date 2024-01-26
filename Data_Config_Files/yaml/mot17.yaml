@@ -1,0 +1,7 @@
+train: /home/rjzx/gyd7409/yolo_tracker_exp/Data/mot17/train.txt
+val: /home/rjzx/gyd7409/yolo_tracker_exp/Data/mot17/val.txt
+test: /home/rjzx/gyd7409/yolo_tracker_exp/Data/mot17/val.txt
+
+nc: 1
+
+names: ['pedestrain']

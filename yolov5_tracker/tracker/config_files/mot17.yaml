@@ -1,0 +1,46 @@
+# Config file of MOT17 dataset
+
+DATASET_ROOT: '/media/rjzx/STORE/users/gyd7409/MOT17'  # your dataset root
+CATEGORY_NAMES:  # category names to show
+  - 'pedestrian'
+
+CATEGORY_DICT:
+  0: 'pedestrian'
+
+CERTAIN_SEQS:
+  - 
+IGNORE_SEQS:  # Seqs you want to ignore
+  - 
+
+YAML_DICT: '../Data/yaml/mot17.yaml'  # NOTE: ONLY for yolo v5 model loader(func DetectMultiBackend)
+  
+TRACK_EVAL:  # If use TrackEval to evaluate, use these configs
+  # 'TRACKERS_TO_EVAL': ['bytetrack_11_01_11_55']  # tracker result 文件夹，是运行的时候建立的，可以手动更改，然后在这里指定手动修改后的结果
+  'DISPLAY_LESS_PROGRESS': False
+  'GT_FOLDER': '/media/rjzx/STORE/users/gyd7409/MOT17/train'
+  'TRACKERS_FOLDER': './tracker/results'
+  'SKIP_SPLIT_FOL': True
+  'TRACKER_SUB_FOLDER': ''
+  'SEQ_INFO': 
+    'MOT17-01-DPM': null
+    'MOT17-01-FRCNN': null
+    'MOT17-01-SDP': null
+    'MOT17-03-DPM': null
+    'MOT17-03-FRCNN': null
+    'MOT17-03-SDP': null
+    'MOT17-06-DPM': null
+    'MOT17-06-FRCNN': null
+    'MOT17-06-SDP': null
+    'MOT17-07-DPM': null
+    'MOT17-07-FRCNN': null
+    'MOT17-07-SDP': null
+    'MOT17-08-DPM': null
+    'MOT17-08-FRCNN': null
+    'MOT17-08-SDP': null
+    'MOT17-12-DPM': null
+    'MOT17-12-FRCNN': null
+    'MOT17-12-SDP': null
+    'MOT17-14-DPM': null
+    'MOT17-14-FRCNN': null
+    'MOT17-14-SDP': null
+  'GT_LOC_FORMAT': '{gt_folder}/{seq}/gt/gt.txt'

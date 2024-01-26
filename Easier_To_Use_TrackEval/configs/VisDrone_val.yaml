@@ -1,0 +1,74 @@
+# for YOLO-Like dir structure 
+# ${data_root}:
+#    |
+#    |___${train_folder_name}(Optional)
+#          |
+#          |____${seq_folder_name}
+#          |          |_______${seq_name}
+#          |                         |____${frame_name}
+#          |____${gt_folder_name}
+#                     |____${gt_txt_name}
+#    |___${test_folder_name}(Optional)
+#          |
+#          |____${seq_folder_name}
+#          |          |_______${seq_name}
+#          |                         |____${frame_name}
+#          |____${gt_folder_name}
+#                     |____${gt_txt_name}
+
+# track result MUST OBEY this strcture:
+# result:
+#    |
+#    |_____${train or test}(Optional)
+#                  |
+#                  |_____${tracker_name}(Optional)
+#                                |_______ ${seq_name}.txt
+
+
+
+gt_structure_config: 
+  data_root: '/data/wujiapeng/datasets/VisDrone2019/VisDrone2019/'
+  has_split: True
+  train_or_test: test
+  train_folder_name: merge_cls_gt_val
+  test_folder_name: merge_cls_gt_val
+  gt_folder_name: annotations
+  gt_txt_name: '{seq_name}.txt'  # gt.txt, {seq_name}.txt, etc.
+  gt_loc_format: '{data_root}/{split_name}/{gt_folder_name}/{gt_txt_name}' 
+
+tracker_structure_config:
+  trackers_folder: './result/visdrone_05_21_22_22'
+  has_split: False
+  split_name: ''
+  has_tracker_name: False
+  trackers_to_eval:   # None for all
+
+
+# other options
+OUTPUT_FOLDER: './track_eval_output'   # Where to save eval results (if None  same as TRACKERS_FOLDER)
+
+SEQ_INFO:  # seq_name: seq_length
+  'uav0000086_00000_v': 464
+  'uav0000117_02622_v': 349
+  'uav0000137_00458_v': 233
+  'uav0000182_00000_v': 363
+  'uav0000268_05773_v': 978
+  'uav0000305_00000_v': 184
+  'uav0000339_00001_v': 275
+
+# CLASS configs
+CLASSES_TO_EVAL: 
+  - 'valid'
+
+CLASS_NAME_TO_CLASS_ID:
+  'ignored regions': 0
+  'valid': 1
+
+VALID_CLASS:
+  'valid'
+
+DISTRACTOR_CLASSES_NAMES:
+  - 'ignored regions'
+
+
+# python scripts/run_custom_dataset.py --config_path configs/VisDrone_val.yaml
