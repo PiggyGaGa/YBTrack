@@ -204,3 +204,16 @@ python tracker/track_yolov5.py --dataset_dir /home/XXX/yolo_tracker_exp/Data/ --
 1. 实机不支持TensorRT版本软件，那一套软件依赖于Nvidia的Jetson系列的API
 2. 可以运行OpenCV-DNN版本的软件，但要重新安装OpenCV4.6在你自己的PC上，然后还需要更改一些配置。可以在实机代码里搜索`OpenCV 4.6`，就能找到CmakeList.txt配置的地方。
 3. PC上无法跑云台控制的功能，需要把代码拆解一下，只跑YBTrack算法部分
+
+
+## 参考了大量前人的工作
+
+1. https://github.com/ultralytics/yolov5
+
+2. https://github.com/JackWoo0831/Yolov7-tracker
+
+3. https://github.com/JackWoo0831/Easier_To_Use_TrackEval
+
+4. https://github.com/amov-lab/Prometheus
+
+5. https://github.com/shaoshengsong/DeepSORT

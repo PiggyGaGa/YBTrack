@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>track_detection</name>
+  <version>0.1.0</version>
+  <description>The track_detection package</description>
+
+  <maintainer email="liana_gyd@163.com">PiggyGaGa</maintainer>
+  <license>BSD</license>
+  <url type="website">http://wiki.999999 </url>
+  <author email="liana_gyd@163.com">PiggyGaGa</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>rosconsole</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>roscpp_serialization</build_depend>
+  <build_depend>rostime</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>rosconsole</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>roscpp_serialization</exec_depend>
+  <exec_depend>rostime</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+
+
+</package>
