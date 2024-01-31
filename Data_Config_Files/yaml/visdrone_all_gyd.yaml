@@ -1,9 +1,0 @@
-# please run convert_VisDrone_to_yolo2_gyd.py
-
-train: /home/rjzx/gyd7409/yolo_tracker_exp/Data/visdrone_gyd_label/train.txt
-val: /home/rjzx/gyd7409/yolo_tracker_exp/Data/visdrone_gyd_label/val.txt
-test: /home/rjzx/gyd7409/yolo_tracker_exp/Data/visdrone_gyd_label/test.txt
-
-nc: 5
-
-names: ['people', 'bicycle', 'car', 'tricycle', 'motor']

@@ -1,8 +1,0 @@
-
-train: /home/rjzx/gyd7409/yolo_tracker_exp/Data/visdrone/train.txt
-val: /home/rjzx/gyd7409/yolo_tracker_exp/Data/visdrone/val.txt
-test: /home/rjzx/gyd7409/yolo_tracker_exp/Data/visdrone/test.txt
-
-nc: 10
-
-names: ['pedestrain', 'people', 'bicycle', 'car', 'van', 'truck', 'tricycle', 'awning-tricycle', 'bus', 'motor']
