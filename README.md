@@ -72,7 +72,9 @@ YOLO训练MOT17数据集实验步骤：
 
 > 训练结果如下所示，第一个图片是真实标签，第二个图片是模型输出
 
+yolov5n_MOT17 标签图像
 ![YOLOv5n-MOT17验证集的标签](./Paper_Figure_Generate_Code/paper_use_result/yolov5n_MOT17_epoch200/val_batch2_labels.jpg)
+yolov5n_MOT17 预测结果
 ![YOLOv5n-MOT17验证集的预测结果](./Paper_Figure_Generate_Code/paper_use_result/yolov5n_MOT17_epoch200/val_batch2_pred.jpg)
 
 
@@ -105,7 +107,9 @@ YOLO训练Visdrone2019实验步骤：
 
 > 训练结果如下所示，第一个图片是真实标签，第二个图片是模型输出
 
+yolov5n visdrone2019 标签
 ![YOLOv5n-MOT17验证集的标签](./Paper_Figure_Generate_Code/paper_use_result/yolov5n_visdrone2019_epoch200/val_batch2_labels.jpg)
+yolov5n visdrone2019 预测结果
 ![YOLOv5n-MOT17验证集的预测结果](./Paper_Figure_Generate_Code/paper_use_result/yolov5n_visdrone2019_epoch200/val_batch2_pred.jpg)
 
 从上图的结果中可以看出，很多小目标都无法被检测出来。
@@ -142,7 +146,9 @@ YOLO训练Visdrone2019实验步骤：
 
 > 训练结果如下所示，第一个图片是真实标签，第二个图片是模型输出
 
+yolov5n visdrone2019 重新调整标签数据集的原始标签
 ![YOLOv5n-MOT17验证集的标签](./Paper_Figure_Generate_Code/paper_use_result/yolov5n_visdrone_relabel_epoch200/val_batch1_labels.jpg)
+yolov5n visdrone2019 重新调整标签数据集的预测结果
 ![YOLOv5n-MOT17验证集的预测结果](./Paper_Figure_Generate_Code/paper_use_result/yolov5n_visdrone_relabel_epoch200/val_batch1_pred.jpg)
 
 
